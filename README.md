@@ -72,3 +72,96 @@ diedukasi lewat media yang mudah diakses, salah satunya website.
 | **Hosting** | GitHub Pages | Hosting statis gratis, ter-deploy otomatis dari branch `main` |
 | **Validasi** | Nu HTML Checker (`vnu.jar`) & W3C CSS Validator | Engine sama dengan validator.w3.org — hasil **0 error** |
 
+
+
+
+
+## 7. URL Website dan Repositori
+
+Website **Hidup Sehat - Edukasi Kesehatan Masyarakat** dipublikasikan menggunakan GitHub Pages agar dapat diakses secara daring. Repositori GitHub digunakan untuk menyimpan kode sumber, aset, dan dokumentasi proyek.
+
+| Keperluan | URL |
+|---|---|
+| **Website (versi online)** | https://lyradelia-commits.github.io/hidup-sehat-sdg3/ |
+| **Repositori GitHub** | https://github.com/lyradelia-commits/hidup-sehat-sdg3 |
+| **Halaman Sumber** | https://lyradelia-commits.github.io/hidup-sehat-sdg3/sumber.html |
+
+Website diposting menggunakan GitHub Pages dengan akses publik melalui HTTPS. Pembaruan website dapat dipublikasikan melalui repositori GitHub sesuai dengan konfigurasi deployment yang digunakan.
+
+### Cara Menjalankan Website Secara Lokal
+Website dapat dijalankan secara lokal melalui langkah-langkah berikut:
+1. Unduh repositori melalui tombol **Code → Download ZIP** di GitHub.
+2. Ekstrak file ZIP ke folder komputer.
+3. Buka folder proyek dan cari file `index.html`.
+4. Klik dua kali file `index.html` untuk membukanya melalui browser.
+
+Website menggunakan HTML dan CSS statis sehingga tidak memerlukan `npm install` atau framework tambahan. Seluruh file HTML, CSS, dan aset gambar perlu tetap berada pada struktur folder yang sesuai agar dapat ditampilkan dengan benar.
+
+## 8. Referensi Konten dan Aset
+
+Konten website **Hidup Sehat — Edukasi Kesehatan Masyarakat** disusun berdasarkan sumber informasi kesehatan yang relevan dan tepercaya. Materi mencakup pola hidup sehat, gizi seimbang, aktivitas fisik, kesehatan mental, serta pencegahan penyakit.
+
+Daftar referensi dan kredit aset juga tersedia pada halaman **Sumber** (`sumber.html`) sebagai bentuk transparansi sumber informasi dan visual yang digunakan dalam proyek.
+
+### 8.1 Referensi Konten
+
+Referensi konten terdiri atas 25 sumber yang digunakan sebagai dasar penyusunan materi edukasi kesehatan. Sumber tersebut mencakup organisasi kesehatan internasional, lembaga pemerintah Indonesia, dan sumber informasi tambahan.
+
+Beberapa referensi utama yang digunakan antara lain:
+
+| No. | Sumber | Kegunaan |
+|---|---|---|
+| 1 | [WHO — Physical Activity](https://www.who.int/news-room/fact-sheets/detail/physical-activity) | Informasi anjuran aktivitas fisik dan kurangnya aktivitas fisik |
+| 2 | [WHO — Healthy Diet](https://www.who.int/news-room/fact-sheets/detail/healthy-diet) | Informasi pola makan sehat, konsumsi buah dan sayur, serta gula |
+| 3 | [WHO — Salt Reduction](https://www.who.int/news-room/fact-sheets/detail/salt-reduction) | Anjuran pembatasan konsumsi garam |
+| 4 | [WHO — Noncommunicable Diseases](https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases) | Informasi penyakit tidak menular dan faktor risikonya |
+| 5 | [WHO — Mental Disorders](https://www.who.int/news-room/fact-sheets/detail/mental-disorders) | Informasi mengenai gangguan kesehatan mental |
+| 6 | [WHO — Mental Health](https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response) | Pengertian dan pentingnya kesehatan mental |
+| 7 | [WHO — Tobacco](https://www.who.int/health-topics/tobacco) | Informasi dampak penggunaan tembakau dan paparan asap rokok |
+| 8 | [WHO — Hand Hygiene](https://www.who.int/teams/integrated-health-services/infection-prevention-control/hand-hygiene) | Informasi kebersihan tangan |
+| 9 | [United Nations — SDG 3](https://www.un.org/sustainabledevelopment/health/) | Informasi tujuan pembangunan berkelanjutan di bidang kesehatan |
+| 10 | [Kemenkes — Isi Piringku](https://ayosehat.kemkes.go.id/isi-piringku-pedoman-makan-kekinian-orang-indonesia) | Pedoman komposisi makanan bergizi seimbang |
+| 11 | [Kemenkes — Kebutuhan Gizi Seimbang](https://ayosehat.kemkes.go.id/isi-piringku-kebutuhan-gizi-harian-seimbang) | Informasi pemenuhan kebutuhan gizi |
+| 12 | [Kemenkes — Batas Gula, Garam, dan Lemak](https://ayosehat.kemkes.go.id/batasi-asupan-gula-garam-dan-lemak-biar-kamu-makin-keren) | Edukasi pembatasan konsumsi gula, garam, dan lemak |
+| 13 | [Kemenkes — Aktivitas Fisik Rutin](https://www.kemkes.go.id/id/aktivitas-fisik-rutin-cegah-hipertensi-diabetes-dan-kolesterol-tinggi) | Manfaat aktivitas fisik untuk mencegah penyakit |
+| 14 | [BKPK Kemenkes — Aktivitas Fisik Penduduk Indonesia](https://www.badankebijakan.kemkes.go.id/aktifitas-fisik-penduduk-indonesia/) | Informasi aktivitas fisik penduduk Indonesia |
+| 15 | [BKPK Kemenkes — Kurang Bergerak](https://www.badankebijakan.kemkes.go.id/kurang-bergerak-ancaman-tersembunyi-kesehatan-indonesia/) | Informasi kurangnya aktivitas fisik berdasarkan data Indonesia |
+| 16 | [Kemenkes — Pekan Imunisasi Dunia 2025](https://www.kemkes.go.id/id/pekan-imunisasi-dunia-2025-ayo-lengkapi-imunisasi-untuk-generasi-sehat-menuju-indonesia-emas) | Informasi imunisasi |
+| 17 | [Kemenkes — Enam Langkah Cuci Tangan](https://ayosehat.kemkes.go.id/6-langkah-cuci-tangan-pakai-sabun) | Panduan cuci tangan pakai sabun |
+| 18 | [Kemenkes — Kebutuhan Waktu Tidur](https://upk.kemkes.go.id/new/lama-waktu-tidur-yang-dibutuhkan-oleh-tubuh) | Informasi kebutuhan tidur berdasarkan usia |
+| 19 | [Kemenkes — Tidur Berkualitas](https://keslan.kemkes.go.id/read/2539/penting-tidur-berkualitas-jaga-kesehatan-fisik-dan-mental) | Hubungan tidur dengan kesehatan fisik dan mental |
+| 20–25 | Sumber tambahan mengenai pola makan sehat, jogging, gizi seimbang, manfaat berlari, kesehatan mental, dan layanan Healing119 | Referensi pendukung materi kesehatan pada website |
+
+Daftar lengkap 25 referensi beserta tautan sumber masing-masing dicantumkan pada halaman `sumber.html`.
+
+### 8.2 Referensi Aset Gambar
+
+Website menggunakan 11 foto yang disimpan secara lokal pada folder `assets/img/`. Gambar digunakan untuk mendukung penyampaian materi agar tampilan website lebih menarik dan informasi lebih mudah dipahami.
+
+Foto diperoleh dari artikel pada situs penerbit terkait. Nama penerbit, judul artikel, dan tautan sumber dicantumkan sebagai kredit aset visual.
+
+| Berkas lokal | Sumber gambar |
+|---|---|
+| `hero-beranda.jpg` | [Medistra Hospital](https://medistra.com/article/pola-makan-sehat-kunci-mencegah-penyakit-dan-meningkatkan-kualitas-hidup) |
+| `aktivitas-hero.jpg` | [Fithub Indonesia](https://fithub.id/blog/jogging-artinya) |
+| `gizi-hidrasi.jpg` | [Alodokter](https://www.alodokter.com/jangan-remehkan-manfaat-air-putih) |
+| `gizi-pasar.jpg` | [Jurnalpost](https://jurnalpost.com/tips-dan-trik-memilih-buah-dan-sayuran-di-pasar-tradisional/89125/) |
+| `gizi-hero.jpg` | [ANTARA News Sulawesi Tengah](https://sulteng.antaranews.com/berita/177984/pakar-gizi-ingatkan-perlunya-gizi-seimbang-pada-penderita-anemia) |
+| `minum-air-makan.jpg` | [Cleopure Water](https://cleopurewater.com/blog/kesehatan/kenapa-harus-minum-air-putih-setelah-makan/) |
+| `aktivitas-lari.jpg` | [detikcom](https://news.detik.com/berita/d-6759293/hari-lari-sedunia-7-juni-yuk-simak-manfaat-berlari) |
+| `aktivitas-yoga.jpg` | [KlikDokter](https://www.klikdokter.com/gaya-hidup/sehat-bugar/jenis-jenis-yoga-yang-baik-bagi-tubuh) |
+| `mental-hero.jpg` | [Halodoc](https://www.halodoc.com/artikel/4-gangguan-mental-yang-terjadi-tanpa-disadari) |
+| `pencegahan-hero.jpg` | [Farmasi UMMADA](https://farmasi.ummada.ac.id/2026/08/10/cuci-tangan-pakai-sabun-kebiasaan-sederhana-untuk-mencegah-penyebaran-penyakit/) |
+| `pencegahan-tensi.jpg` | [Alodokter](https://www.alodokter.com/berapa-tekanan-darah-normal-orang-dewasa) |
+
+Kredit gambar juga dicantumkan pada halaman `sumber.html`. Penggunaan dan pengolahan aset perlu tetap mengikuti ketentuan lisensi serta atribusi dari masing-masing pemilik atau penerbit.
+
+### 8.3 Referensi Aset Pendukung
+
+| Aset | Sumber | Keterangan |
+|---|---|---|
+| Font Plus Jakarta Sans | [Google Fonts](https://fonts.google.com/specimen/Plus+Jakarta+Sans) | Digunakan untuk tipografi website dengan lisensi SIL Open Font License 1.1 |
+| Ikon navigasi dan antarmuka | SVG inline yang ditulis langsung pada HTML | Digunakan untuk mendukung tampilan dan navigasi |
+| `favicon.svg` | Dibuat sendiri dalam format SVG | Digunakan sebagai ikon website |
+
+
