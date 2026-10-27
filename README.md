@@ -75,9 +75,6 @@ diedukasi lewat media yang mudah diakses, salah satunya website.
 
 ## 5. Penjelasan Penting dari Implementasi
 
-Lima hal yang diminta - HTML, CSS, navigasi, Flexbox/Grid, dan media queries - masing-masing
-satu paragraf penjelasan + satu contoh kode yang benar-benar dipakai di proyek.
-
 ### 5.1 HTML - semantik dan struktur halaman
 
 Semua halaman memakai kerangka yang sama: `header` (logo + navigasi) → `main` (isi) →
