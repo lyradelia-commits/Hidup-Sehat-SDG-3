@@ -1,4 +1,4 @@
-# Hidup Sehat — Edukasi Kesehatan Masyarakat (SDG 3)
+# Hidup Sehat - Edukasi Kesehatan Masyarakat (SDG 3)
 
 Website statis bertema **SDG 3: Kehidupan Sehat dan Sejahtera** yang berisi edukasi
 kesehatan masyarakat untuk publik. Dibangun dengan **HTML dan CSS murni tanpa framework**
@@ -20,18 +20,18 @@ sebagai tugas mata kuliah **Pemrograman Web**.
 
 **Judul website:** Hidup Sehat — Edukasi Kesehatan Masyarakat
 
-**Tema SDGs:** **Goal 3 — Good Health and Well-being (Kehidupan Sehat dan Sejahtera)**
+**Tema SDGs:** **Goal 3 - Good Health and Well-being (Kehidupan Sehat dan Sejahtera)**
 
 Alasan memilih tema ini: SDG 3 menyentuh seluruh siklus hidup manusia, dan capaiannya
-sangat ditentukan oleh perilaku harian — makan, bergerak, tidur, mengelola stres,
-menjaga kebersihan — bukan hanya oleh layanan rumah sakit. Perilaku itulah yang bisa
+sangat ditentukan oleh perilaku harian - makan, bergerak, tidur, mengelola stres,
+menjaga kebersihan - bukan hanya oleh layanan rumah sakit. Perilaku itulah yang bisa
 diedukasi lewat media yang mudah diakses, salah satunya website.
 
 **Sasaran pengguna:**
 
 | Segmen | Kebutuhan yang dilayani |
 |---|---|
-| **Remaja & mahasiswa (15–24 tahun)** | Anjuran aktivitas fisik, gizi praktis dengan budget terbatas, cara mengenali stres dan mencari bantuan |
+| **Remaja & mahasiswa (15-24 tahun)** | Anjuran aktivitas fisik, gizi praktis dengan budget terbatas, cara mengenali stres dan mencari bantuan |
 | **Keluarga muda / orang tua** | Panduan porsi makan keluarga, jadwal imunisasi anak, kebiasaan bersih di rumah |
 | **Masyarakat umum dengan literasi kesehatan rendah** | Penjelasan singkat tanpa istilah medis rumit, angka yang bisa langsung dipakai |
 | **Kader kesehatan / pelajar** | Rujukan cepat ke sumber resmi WHO dan Kemenkes yang bisa diverifikasi |
@@ -65,20 +65,20 @@ diedukasi lewat media yang mudah diakses, salah satunya website.
 | **Markup** | HTML5 | Elemen semantik: `header`, `nav`, `main`, `section`, `article`, `figure`, `figcaption`, `table`, `thead`, `tbody`, `th scope`, `details`, `summary`, `footer` |
 | **Styling** | CSS3 murni | CSS Custom Properties (variabel), Grid Layout, Flexbox, `clamp()`, media queries, `prefers-reduced-motion`, `@media print` |
 | **Interaksi** | JavaScript ES5 (vanilla) | **32 baris**, hanya untuk tombol menu di layar kecil. Tanpa library, tanpa framework |
-| **Tipografi** | Google Fonts — Plus Jakarta Sans | Lisensi SIL Open Font License 1.1, bobot 400/600/700/800 |
+| **Tipografi** | Google Fonts - Plus Jakarta Sans | Lisensi SIL Open Font License 1.1, bobot 400/600/700/800 |
 | **Ikon** | SVG inline | Ditulis langsung di HTML, tidak perlu file ikon tambahan |
 | **Gambar** | JPEG terkompresi | Maksimal 1400 px, kualitas 85, disimpan lokal di `assets/img/` |
 | **Version control** | Git + GitHub | Repositori publik, riwayat commit per tahap pengerjaan |
 | **Hosting** | GitHub Pages | Hosting statis gratis, ter-deploy otomatis dari branch `main` |
-| **Validasi** | Nu HTML Checker (`vnu.jar`) & W3C CSS Validator | Engine sama dengan validator.w3.org — hasil **0 error** |
+| **Validasi** | Nu HTML Checker (`vnu.jar`) & W3C CSS Validator | Engine sama dengan validator.w3.org - hasil **0 error** |
 
 
 ## 5. Penjelasan Penting dari Implementasi
 
-Lima hal yang diminta — HTML, CSS, navigasi, Flexbox/Grid, dan media queries — masing-masing
+Lima hal yang diminta - HTML, CSS, navigasi, Flexbox/Grid, dan media queries - masing-masing
 satu paragraf penjelasan + satu contoh kode yang benar-benar dipakai di proyek.
 
-### 5.1 HTML — semantik dan struktur halaman
+### 5.1 HTML - semantik dan struktur halaman
 
 Semua halaman memakai kerangka yang sama: `header` (logo + navigasi) → `main` (isi) →
 `footer`. Tiga baris berikut wajib ada dan punya alasan masing-masing:
@@ -90,7 +90,7 @@ Semua halaman memakai kerangka yang sama: `header` (logo + navigasi) → `main` 
 ```
 
 `lang="id"` agar pembaca layar memakai pelafalan Indonesia. `viewport` adalah syarat
-agar media query bekerja di ponsel — tanpa baris ini halaman dirender selebar ±980 px
+agar media query bekerja di ponsel - tanpa baris ini halaman dirender selebar ±980 px
 lalu dikecilkan, sehingga semua teks terlihat kecil. CSS ditaruh di file eksternal
 karena itu yang disyaratkan tugas.
 
@@ -104,10 +104,10 @@ Tabel diberi `caption` + `scope` supaya terbaca sebagai tabel oleh pembaca layar
 </table>
 ```
 
-Atribut `data-label` bukan atribut standar HTML — dipakai CSS pada bagian 5.5 untuk
+Atribut `data-label` bukan atribut standar HTML - dipakai CSS pada bagian 5.5 untuk
 menampilkan nama kolom ketika tabel berubah menjadi kartu di layar kecil.
 
-### 5.2 CSS — satu file, variabel, dan teks adaptif
+### 5.2 CSS - satu file, variabel, dan teks adaptif
 
 Seluruh 7 halaman memakai satu file `css/style.css` (936 baris, dibagi 20 bagian
 berkomentar). Warna dan ukuran disimpan sebagai variabel agar tema bisa diubah dari
@@ -123,9 +123,9 @@ h1 { font-size: clamp(2rem, 1.35rem + 3.2vw, 3.5rem); }
 ```
 
 Hasil terukur: H1 menjadi **33,6 px di 375 px**, **46 px di 768 px**, dan **56 px di
-1440 px** — tanpa satu pun media query tambahan.
+1440 px** - tanpa satu pun media query tambahan.
 
-### 5.3 Navigasi — Flexbox dan penanda halaman aktif
+### 5.3 Navigasi - Flexbox dan penanda halaman aktif
 
 Header memakai `position: sticky` agar menu tetap terlihat saat di-scroll, dengan
 susunan Flexbox satu baris:
@@ -161,7 +161,7 @@ JavaScript hanya 32 baris untuk menambah/hapus class `.buka` dan menjaga atribut
 `aria-expanded`. Situs tetap bisa dipakai tanpa JavaScript karena seluruh tautan juga
 tersedia di footer.
 
-### 5.4 Flexbox dan Grid — pembagian tugasnya
+### 5.4 Flexbox dan Grid - pembagian tugasnya
 
 **Grid** untuk tata letak dua dimensi (hero, kartu, statistik, footer). **Flexbox**
 untuk susunan satu arah (navbar, tombol, daftar centang).
@@ -180,7 +180,7 @@ untuk susunan satu arah (navbar, tombol, daftar centang).
 Satu baris `auto-fit` + `minmax` di atas menggantikan dua media query, karena jumlah
 kolom dihitung sendiri oleh browser.
 
-### 5.5 Media queries — lima titik henti
+### 5.5 Media queries - lima titik henti
 
 Titik henti ditentukan dari **kapan tata letak mulai rusak**, bukan dari nama perangkat:
 
@@ -299,7 +299,6 @@ hidup-sehat-sdg3/
 - Folder `preview/` (screenshot hasil pengujian) **tidak di-commit** karena hanya dipakai saat menyusun laporan.
 
 ---
-
 
 ## 7. URL Website dan Repositori
 
