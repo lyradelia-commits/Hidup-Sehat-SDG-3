@@ -165,3 +165,230 @@ Kredit gambar juga dicantumkan pada halaman `sumber.html`. Penggunaan dan pengol
 | `favicon.svg` | Dibuat sendiri dalam format SVG | Digunakan sebagai ikon website |
 
 
+## 5. Penjelasan Penting dari Implementasi
+
+Lima hal yang diminta — HTML, CSS, navigasi, Flexbox/Grid, dan media queries — masing-masing
+satu paragraf penjelasan + satu contoh kode yang benar-benar dipakai di proyek.
+
+### 5.1 HTML — semantik dan struktur halaman
+
+Semua halaman memakai kerangka yang sama: `header` (logo + navigasi) → `main` (isi) →
+`footer`. Tiga baris berikut wajib ada dan punya alasan masing-masing:
+
+```html
+<html lang="id">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+```
+
+`lang="id"` agar pembaca layar memakai pelafalan Indonesia. `viewport` adalah syarat
+agar media query bekerja di ponsel — tanpa baris ini halaman dirender selebar ±980 px
+lalu dikecilkan, sehingga semua teks terlihat kecil. CSS ditaruh di file eksternal
+karena itu yang disyaratkan tugas.
+
+Tabel diberi `caption` + `scope` supaya terbaca sebagai tabel oleh pembaca layar:
+
+```html
+<table>
+  <caption>Jadwal imunisasi rutin (Kemenkes RI)</caption>
+  <thead><tr><th scope="col">Usia</th><th scope="col">Imunisasi</th></tr></thead>
+  <tbody><tr><th scope="row">2 bulan</th><td data-label="Imunisasi">DPT-HB-Hib 1</td></tr></tbody>
+</table>
+```
+
+Atribut `data-label` bukan atribut standar HTML — dipakai CSS pada bagian 5.5 untuk
+menampilkan nama kolom ketika tabel berubah menjadi kartu di layar kecil.
+
+### 5.2 CSS — satu file, variabel, dan teks adaptif
+
+Seluruh 7 halaman memakai satu file `css/style.css` (936 baris, dibagi 20 bagian
+berkomentar). Warna dan ukuran disimpan sebagai variabel agar tema bisa diubah dari
+satu tempat, dan ukuran judul memakai `clamp()` sehingga tidak perlu media query:
+
+```css
+:root { --hijau-700: #146c52; --garis: #d8e6df; --radius: 16px; --lebar: 1120px; }
+
+/* minimum 2rem · mengikuti lebar layar · maksimum 3.5rem */
+h1 { font-size: clamp(2rem, 1.35rem + 3.2vw, 3.5rem); }
+
+.container { width: min(100% - 2.5rem, var(--lebar)); margin-inline: auto; }
+```
+
+Hasil terukur: H1 menjadi **33,6 px di 375 px**, **46 px di 768 px**, dan **56 px di
+1440 px** — tanpa satu pun media query tambahan.
+
+### 5.3 Navigasi — Flexbox dan penanda halaman aktif
+
+Header memakai `position: sticky` agar menu tetap terlihat saat di-scroll, dengan
+susunan Flexbox satu baris:
+
+```css
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+```
+
+Halaman aktif ditandai dengan `aria-current="page"` (atribut, bukan class), lalu
+diwarnai lewat selektor atribut. Cara ini membuat penanda aktif juga terbaca pembaca
+layar, bukan sekadar berbeda warna:
+
+```html
+<li><a href="index.html" aria-current="page">Beranda</a></li>
+```
+
+```css
+.nav-menu a[aria-current="page"] { background: var(--hijau-900); color: #fff; }
+```
+
+Di bawah 1040 px tujuh item menu tidak muat lagi, sehingga diganti tombol:
+
+```css
+@media (max-width: 1040px) {
+  .nav-toggle { display: inline-flex; margin-left: auto; min-height: 44px; }
+  .situs-header nav { display: contents; }   /* agar tombol menempel ke kanan */
+  .nav-menu { position: absolute; top: 100%; left: 0; right: 0; display: none; }
+  .nav-menu.buka { display: flex; }
+}
+```
+
+JavaScript hanya 32 baris untuk menambah/hapus class `.buka` dan menjaga atribut
+`aria-expanded`. Situs tetap bisa dipakai tanpa JavaScript karena seluruh tautan juga
+tersedia di footer.
+
+### 5.4 Flexbox dan Grid — pembagian tugasnya
+
+**Grid** untuk tata letak dua dimensi (hero, kartu, statistik, footer). **Flexbox**
+untuk susunan satu arah (navbar, tombol, daftar centang).
+
+```css
+/* Grid: jumlah kolom menyesuaikan sendiri, 1 -> 2 -> 3 */
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); }
+
+/* Grid dua kolom dengan proporsi 1.05 : 0.95 supaya sisi teks lebih lebar */
+.hero-dalam { display: grid; grid-template-columns: 1.05fr .95fr; gap: 2rem; }
+
+/* Flexbox: tombol otomatis turun baris kalau ruang habis */
+.hero-aksi { display: flex; flex-wrap: wrap; gap: .75rem; }
+```
+
+Satu baris `auto-fit` + `minmax` di atas menggantikan dua media query, karena jumlah
+kolom dihitung sendiri oleh browser.
+
+### 5.5 Media queries — lima titik henti
+
+Titik henti ditentukan dari **kapan tata letak mulai rusak**, bukan dari nama perangkat:
+
+| Media query | Alasan batasnya | Yang berubah |
+|---|---|---|
+| `min-width: 1000px` | 3 kolom kartu masih nyaman di atas lebar ini | Kartu pilar dipaksa 3+3, tidak menggantung |
+| `max-width: 1040px` | 7 menu + logo tidak muat satu baris | Menu jadi tombol, hero & konten jadi 1 kolom |
+| `min-width: 561px` – `max-width: 900px` | 4 kartu statistik pecah jadi 3+1 | Statistik jadi 2×2 |
+| `max-width: 700px` | Tabel 5 kolom sudah terlalu sempit | **Tabel jadi kartu bertumpuk** |
+| `max-width: 560px` | Lebar ponsel umum | Teks 17 px, tombol selebar layar, target sentuh 44 px |
+
+Bagian tersulit adalah tabel. Tabel 4–5 kolom di layar 375 px hanya menyisakan ±60 px
+per kolom, jadi sel diubah menjadi blok dan nama kolom ditampilkan dari `data-label`:
+
+```css
+@media (max-width: 700px) {
+  table, tbody, tr, th, td { display: block; width: 100%; }
+  thead { display: none; }                    /* header tabel disembunyikan */
+  caption { display: block; width: 100%; }    /* kalau tidak, caption menyusut */
+
+  tbody td::before {
+    content: attr(data-label);                /* nama kolom dari atribut HTML */
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--teks-lembut);
+  }
+}
+```
+
+Hasilnya di ponsel tabel tetap terbaca tanpa perlu digeser ke samping:
+
+```
+DEWASA 18-64 TAHUN          <- isi <th scope="row">, jadi judul kartu
+AKTIVITAS AEROBIK           <- dari data-label kolom 2
+150-300 menit per minggu
+INTENSITAS BERAT            <- dari data-label kolom 3
+75-150 menit per minggu
+```
+
+**Hasil pengujian di tiga viewport:**
+
+| Aspek | Desktop 1440 px | Tablet 768 px | Smartphone 375 px |
+|---|---|---|---|
+| Kolom konten | 2 kolom | 1 kolom | 1 kolom |
+| Kartu | 3 kolom | 2 kolom | 1 kolom |
+| Teks dasar | 16 px | 16 px | 17 px |
+| Navigasi | 7 menu horizontal | Tombol Menu 44 px | Tombol Menu 44 px |
+| Tabel | tabel penuh | tabel penuh | kartu bertumpuk |
+| Scroll horizontal | tidak ada | tidak ada | tidak ada |
+
+### 5.6 Aksesibilitas (ringkas)
+
+- `alt` deskriptif pada semua gambar, `skip-link` untuk pengguna keyboard, dan
+  `:focus-visible` dengan outline 3 px.
+- `aria-current`, `aria-expanded`, dan `aria-controls` pada navigasi.
+- Satu `h1` per halaman tanpa melompati level heading.
+- Target sentuh minimal 44 px dan animasi dimatikan saat `prefers-reduced-motion`.
+
+---
+
+## 6. Struktur Folder
+
+```
+hidup-sehat-sdg3/
+├── .gitignore                   # mengecualikan folder preview & file OS
+├── README.md                    # dokumentasi ini
+│
+├── index.html                   # 1. Beranda
+├── pola-hidup-sehat.html        # 2. Pola Hidup Sehat
+├── gizi-seimbang.html           # 3. Gizi Seimbang
+├── aktivitas-fisik.html         # 4. Aktivitas Fisik
+├── kesehatan-mental.html        # 5. Kesehatan Mental
+├── pencegahan-penyakit.html     # 6. Pencegahan Penyakit
+├── sumber.html                  # 7. Sumber & kredit
+│
+├── css/
+│   └── style.css                # satu-satunya stylesheet (936 baris)
+│
+├── js/
+│   └── main.js                  # 32 baris, hanya untuk menu mobile
+│
+└── assets/
+    ├── favicon.svg              # ikon tab browser (416 byte)
+    └── img/                     # 11 foto, total lebih kurang 1,1 MB
+        ├── hero-beranda.jpg
+        ├── aktivitas-hero.jpg
+        ├── aktivitas-lari.jpg
+        ├── aktivitas-yoga.jpg
+        ├── gizi-hero.jpg
+        ├── gizi-hidrasi.jpg
+        ├── gizi-pasar.jpg
+        ├── minum-air-makan.jpg
+        ├── mental-hero.jpg
+        ├── pencegahan-hero.jpg
+        └── pencegahan-tensi.jpg
+```
+
+**Ringkasan jumlah berkas:**
+
+| Jenis | Jumlah | Ukuran |
+|---|---|---|
+| Halaman HTML | 7 file | lebih kurang 148 KB (2.402 baris) |
+| Stylesheet | 1 file | 23 KB (936 baris) |
+| JavaScript | 1 file | 1 KB (32 baris) |
+| Gambar | 11 file | lebih kurang 1,1 MB |
+| Ikon | 1 file | 416 byte |
+| Dokumentasi | 2 file | 7 KB |
+| **Total repositori** | **23 file** | **lebih kurang 1,3 MB** |
+
+**Alasan penataan ini:**
+
+- `css/` dan `js/` dipisah karena tugas mensyaratkan **CSS eksternal**, bukan `<style>` di dalam HTML.
+- `assets/img/` menyimpan gambar **secara lokal**, bukan hotlink ke situs lain. Kalau memakai `<img src="https://medistra.com/...">`, gambar akan mati saat situs sumber mengganti atau menghapus berkasnya, dan halaman menjadi lebih lambat.
+- Folder `preview/` (screenshot hasil pengujian) **tidak di-commit** karena hanya dipakai saat menyusun laporan.
+
+---
+
