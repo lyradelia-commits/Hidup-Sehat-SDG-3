@@ -244,9 +244,6 @@ INTENSITAS BERAT            <- dari data-label kolom 3
 
 ```
 hidup-sehat-sdg3/
-├── .gitignore                   # mengecualikan folder preview & file OS
-├── README.md                    # dokumentasi ini
-│
 ├── index.html                   # 1. Beranda
 ├── pola-hidup-sehat.html        # 2. Pola Hidup Sehat
 ├── gizi-seimbang.html           # 3. Gizi Seimbang
@@ -262,7 +259,7 @@ hidup-sehat-sdg3/
 │   └── main.js                  # 32 baris, hanya untuk menu mobile
 │
 └── assets/
-    ├── favicon.svg              # ikon tab browser (416 byte)
+    ├── icon.svg              # ikon tab browser (416 byte)
     └── img/                     # 11 foto, total lebih kurang 1,1 MB
         ├── hero-beranda.jpg
         ├── aktivitas-hero.jpg
@@ -303,9 +300,9 @@ Website **Hidup Sehat - Edukasi Kesehatan Masyarakat** dipublikasikan menggunaka
 
 | Keperluan | URL |
 |---|---|
-| **Website (versi online)** | https://lyradelia-commits.github.io/hidup-sehat-sdg3/ |
+| **Website (versi online)** |  |
 | **Repositori GitHub** | https://github.com/lyradelia-commits/Hidup-Sehat-SDG-3 |
-| **Halaman Sumber** | https://lyradelia-commits.github.io/hidup-sehat-sdg3/sumber.html |
+| **Halaman Sumber** | |
 
 Website diposting menggunakan GitHub Pages dengan akses publik melalui HTTPS. Pembaruan website dapat dipublikasikan melalui repositori GitHub sesuai dengan konfigurasi deployment yang digunakan.
 
