@@ -1,4 +1,4 @@
-Hidup Sehat — SDG 3
+Hidup Sehat — Edukasi Kesehatan Masyarakat (SDG 3)
 
 Website edukasi kesehatan yang mengangkat tema Sustainable Development Goals (SDGs) nomor 3, yaitu Kehidupan Sehat dan Sejahtera.
 
