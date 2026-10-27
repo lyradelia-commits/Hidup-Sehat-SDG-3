@@ -75,7 +75,7 @@ diedukasi lewat media yang mudah diakses, salah satunya website.
 
 ## 5. Penjelasan Penting dari Implementasi
 
-### 5.1 HTML - semantik dan struktur halaman
+### 5.1 HTML
 
 Semua halaman memakai kerangka yang sama: `header` (logo + navigasi) → `main` (isi) →
 `footer`. Tiga baris berikut wajib ada dan punya alasan masing-masing:
@@ -104,7 +104,7 @@ Tabel diberi `caption` + `scope` supaya terbaca sebagai tabel oleh pembaca layar
 Atribut `data-label` bukan atribut standar HTML - dipakai CSS pada bagian 5.5 untuk
 menampilkan nama kolom ketika tabel berubah menjadi kartu di layar kecil.
 
-### 5.2 CSS - satu file, variabel, dan teks adaptif
+### 5.2 CSS
 
 Seluruh 7 halaman memakai satu file `css/style.css` (936 baris, dibagi 20 bagian
 berkomentar). Warna dan ukuran disimpan sebagai variabel agar tema bisa diubah dari
@@ -122,7 +122,7 @@ h1 { font-size: clamp(2rem, 1.35rem + 3.2vw, 3.5rem); }
 Hasil terukur: H1 menjadi **33,6 px di 375 px**, **46 px di 768 px**, dan **56 px di
 1440 px** - tanpa satu pun media query tambahan.
 
-### 5.3 Navigasi - Flexbox dan penanda halaman aktif
+### 5.3 Navigasi 
 
 Header memakai `position: sticky` agar menu tetap terlihat saat di-scroll, dengan
 susunan Flexbox satu baris:
@@ -158,7 +158,7 @@ JavaScript hanya 32 baris untuk menambah/hapus class `.buka` dan menjaga atribut
 `aria-expanded`. Situs tetap bisa dipakai tanpa JavaScript karena seluruh tautan juga
 tersedia di footer.
 
-### 5.4 Flexbox dan Grid - pembagian tugasnya
+### 5.4 Flexbox dan Grid
 
 **Grid** untuk tata letak dua dimensi (hero, kartu, statistik, footer). **Flexbox**
 untuk susunan satu arah (navbar, tombol, daftar centang).
@@ -177,7 +177,7 @@ untuk susunan satu arah (navbar, tombol, daftar centang).
 Satu baris `auto-fit` + `minmax` di atas menggantikan dua media query, karena jumlah
 kolom dihitung sendiri oleh browser.
 
-### 5.5 Media queries - lima titik henti
+### 5.5 Media queries 
 
 Titik henti ditentukan dari **kapan tata letak mulai rusak**, bukan dari nama perangkat:
 
@@ -273,27 +273,6 @@ hidup-sehat-sdg3/
         ├── pencegahan-hero.jpg
         └── pencegahan-tensi.jpg
 ```
-
-**Ringkasan jumlah berkas:**
-
-| Jenis | Jumlah | Ukuran |
-|---|---|---|
-| Halaman HTML | 7 file | lebih kurang 148 KB (2.402 baris) |
-| Stylesheet | 1 file | 23 KB (936 baris) |
-| JavaScript | 1 file | 1 KB (32 baris) |
-| Gambar | 11 file | lebih kurang 1,1 MB |
-| Ikon | 1 file | 416 byte |
-| Dokumentasi | 2 file | 7 KB |
-| **Total repositori** | **23 file** | **lebih kurang 1,3 MB** |
-
-**Alasan penataan ini:**
-
-- `css/` dan `js/` dipisah karena tugas mensyaratkan **CSS eksternal**, bukan `<style>` di dalam HTML.
-- `assets/img/` menyimpan gambar **secara lokal**, bukan hotlink ke situs lain. Kalau memakai `<img src="https://medistra.com/...">`, gambar akan mati saat situs sumber mengganti atau menghapus berkasnya, dan halaman menjadi lebih lambat.
-- Folder `preview/` (screenshot hasil pengujian) **tidak di-commit** karena hanya dipakai saat menyusun laporan.
-
----
-
 ## 7. URL Website dan Repositori
 
 Website **Hidup Sehat - Edukasi Kesehatan Masyarakat** dipublikasikan menggunakan GitHub Pages agar dapat diakses secara daring. Repositori GitHub digunakan untuk menyimpan kode sumber, aset, dan dokumentasi proyek.
@@ -302,18 +281,6 @@ Website **Hidup Sehat - Edukasi Kesehatan Masyarakat** dipublikasikan menggunaka
 |---|---|
 | **Website (versi online)** | https://lyradelia-commits.github.io/Hidup-Sehat-SDG-3/ |
 | **Repositori GitHub** | https://github.com/lyradelia-commits/Hidup-Sehat-SDG-3.git |
-| **Halaman Sumber** |  https://lyradelia-commits.github.io/hidup-sehat-sdg3/sumber.html |
-
-Website diposting menggunakan GitHub Pages dengan akses publik melalui HTTPS. Pembaruan website dapat dipublikasikan melalui repositori GitHub sesuai dengan konfigurasi deployment yang digunakan.
-
-### Cara Menjalankan Website Secara Lokal
-Website dapat dijalankan secara lokal melalui langkah-langkah berikut:
-1. Unduh repositori melalui tombol **Code → Download ZIP** di GitHub.
-2. Ekstrak file ZIP ke folder komputer.
-3. Buka folder proyek dan cari file `index.html`.
-4. Klik dua kali file `index.html` untuk membukanya melalui browser.
-
-Website menggunakan HTML dan CSS statis sehingga tidak memerlukan `npm install` atau framework tambahan. Seluruh file HTML, CSS, dan aset gambar perlu tetap berada pada struktur folder yang sesuai agar dapat ditampilkan dengan benar.
 
 ## 8. Referensi Konten dan Aset
 
