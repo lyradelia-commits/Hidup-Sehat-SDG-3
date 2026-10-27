@@ -12,9 +12,9 @@ sebagai tugas mata kuliah **Pemrograman Web**.
 
 | No | Nama | NIM | Pembagian tugas |
 |---|---|---|---|
-| 1 | **Kadek Lyradelia Pracili** | 2515091032 | Membuat |
-| 2 | **Astria Laura Dwi Putri** | 2515091082 | Halaman Pola Hidup Sehat dan Gizi Seimbang, penyusunan tabel data (kebutuhan tidur, porsi Isi Piringku), verifikasi angka rujukan WHO/Kemenkes |
-| 3 | **Dhea Natasya Putri** | 2515091131 | Halaman Aktivitas Fisik, Kesehatan Mental, dan Pencegahan Penyakit, navigasi & menu mobile, pengujian responsif 1440/768/375 px |
+| 1 | **Kadek Lyradelia Pracili** | 2515091032 | Mengelola struktur proyek, membuat stylesheet global (css/style.css), mengelola aset gambar (assets/), membuat dan mengelola JavaScript (js/), mengembangkan halaman Beranda (index.html) dan Sumber (sumber.html), membantu proses build dan deployment ke GitHub Pages,serta membantu penyusunan dan penyuntingan README.md. |
+| 2 | **Astria Laura Dwi Putri** | 2515091082 | Mengembangkan halaman Pola Hidup Sehat (pola-hidup-sehat.html), Gizi Seimbang (gizi-seimbang.html), Kesehatan Mental (kesehatan-mental.html), dan Pencegahan Penyakit (pencegahan-penyakit.html), termasuk penyusunan materi dan tabel informasi kesehatan, serta membantu penyusunan dan penyuntingan README.md. |
+| 3 | **Dhea Natasya Putri** | 2515091131 | Mengembangkan halaman Aktivitas Fisik (aktivitas-fisik.html), membantu penyusunan dan verifikasi referensi konten serta aset, dan berkontribusi dalam pengujian tampilan website pada berbagai ukuran layar, serta membantu penyusunan dan penyuntingan README.md.|
 
 ## 2. Judul, Tema SDGs, dan Sasaran Pengguna
 
@@ -37,7 +37,15 @@ diedukasi lewat media yang mudah diakses, salah satunya website.
 | **Kader kesehatan / pelajar** | Rujukan cepat ke sumber resmi WHO dan Kemenkes yang bisa diverifikasi |
 
 ---
+## 3. Tujuan, Manfaat, dan Deskripsi Setiap Halaman
 
+### 3.1 Tujuan
+
+1. Menyediakan kanal edukasi kesehatan berbahasa Indonesia yang **ringkas, mudah dibaca, dan berbasis rujukan resmi** (WHO dan Kementerian Kesehatan RI).
+2. Menerjemahkan angka dan anjuran kesehatan menjadi **tindakan harian yang konkret**, bukan sekadar informasi.
+3. Membiasakan pembaca **memverifikasi sumber** — setiap angka bisa dilacak ke publikasi aslinya.
+4. Memenuhi capaian pembelajaran mata kuliah Pemrograman Web: membangun situs **statis, valid, dan responsif** tanpa framework.
+   
 ### 3.2 Manfaat
 
 | Bagi | Manfaat |
