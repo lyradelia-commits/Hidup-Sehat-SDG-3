@@ -58,4 +58,17 @@ diedukasi lewat media yang mudah diakses, salah satunya website.
 | 6 | **Pencegahan Penyakit** (`pencegahan-penyakit.html`) | Membedakan strategi pencegahan penyakit menular dan tidak menular | Dua kelompok penyakit, 6 langkah cuci tangan pakai sabun, tabel jadwal imunisasi rutin, pengendalian faktor risiko PTM, bahaya rokok, FAQ |
 | 7 | **Sumber** (`sumber.html`) | Menyediakan transparansi rujukan dan kredit aset | Tabel 25 sumber rujukan, tabel kredit 11 foto beserta penerbit dan tautan artikel asli, catatan tentang situs, informasi kontak darurat |
 
+## 4. Teknologi yang Digunakan
+
+| Kategori | Teknologi | Keterangan |
+|---|---|---|
+| **Markup** | HTML5 | Elemen semantik: `header`, `nav`, `main`, `section`, `article`, `figure`, `figcaption`, `table`, `thead`, `tbody`, `th scope`, `details`, `summary`, `footer` |
+| **Styling** | CSS3 murni | CSS Custom Properties (variabel), Grid Layout, Flexbox, `clamp()`, media queries, `prefers-reduced-motion`, `@media print` |
+| **Interaksi** | JavaScript ES5 (vanilla) | **32 baris**, hanya untuk tombol menu di layar kecil. Tanpa library, tanpa framework |
+| **Tipografi** | Google Fonts — Plus Jakarta Sans | Lisensi SIL Open Font License 1.1, bobot 400/600/700/800 |
+| **Ikon** | SVG inline | Ditulis langsung di HTML, tidak perlu file ikon tambahan |
+| **Gambar** | JPEG terkompresi | Maksimal 1400 px, kualitas 85, disimpan lokal di `assets/img/` |
+| **Version control** | Git + GitHub | Repositori publik, riwayat commit per tahap pengerjaan |
+| **Hosting** | GitHub Pages | Hosting statis gratis, ter-deploy otomatis dari branch `main` |
+| **Validasi** | Nu HTML Checker (`vnu.jar`) & W3C CSS Validator | Engine sama dengan validator.w3.org — hasil **0 error** |
 
