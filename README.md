@@ -34,7 +34,6 @@ diedukasi lewat media yang mudah diakses, salah satunya website.
 | **Remaja & mahasiswa (15-24 tahun)** | Anjuran aktivitas fisik, gizi praktis dengan budget terbatas, cara mengenali stres dan mencari bantuan |
 | **Keluarga muda / orang tua** | Panduan porsi makan keluarga, jadwal imunisasi anak, kebiasaan bersih di rumah |
 | **Masyarakat umum dengan literasi kesehatan rendah** | Penjelasan singkat tanpa istilah medis rumit, angka yang bisa langsung dipakai |
-| **Kader kesehatan / pelajar** | Rujukan cepat ke sumber resmi WHO dan Kemenkes yang bisa diverifikasi |
 
 ---
 ## 3. Tujuan, Manfaat, dan Deskripsi Setiap Halaman
