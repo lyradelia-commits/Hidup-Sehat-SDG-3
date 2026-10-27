@@ -78,7 +78,7 @@ diedukasi lewat media yang mudah diakses, salah satunya website.
 | **Gambar** | JPEG terkompresi | Maksimal 1400 px, kualitas 85, disimpan lokal di `assets/img/` |
 | **Version control** | Git + GitHub | Repositori publik, riwayat commit per tahap pengerjaan |
 | **Hosting** | GitHub Pages | Hosting statis gratis, ter-deploy otomatis dari branch `main` |
-| **Validasi** | Nu HTML Checker (`vnu.jar`) & W3C CSS Validator | Engine sama dengan validator.w3.org - hasil **0 error** |
+| **Validasi** | Nu HTML Checker (`vnu.jar`) & W3C CSS Validator | Engine sama dengan validator.w3.org |
 
 
 ## 5. Penjelasan Penting dari Implementasi
