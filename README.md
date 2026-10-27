@@ -1,11 +1,7 @@
-Hidup Sehat — Edukasi Kesehatan Masyarakat (SDG 3)
+# Hidup Sehat — Edukasi Kesehatan Masyarakat (SDG 3)
 
-Website edukasi kesehatan yang mengangkat tema Sustainable Development Goals (SDGs) nomor 3, yaitu Kehidupan Sehat dan Sejahtera.
+Website statis bertema **SDG 3: Kehidupan Sehat dan Sejahtera** yang berisi edukasi
+kesehatan masyarakat untuk publik. Dibangun dengan **HTML dan CSS murni tanpa framework**
+sebagai tugas mata kuliah **Pemrograman Web**.
 
-1. Identitas Kelompok
-Nama Kelompok: Jumbies Geng
-Mata Kuliah: Pemrograman Web
-Anggota Kelompok
-Kadek Lyradellia Pracili — NIM: 2515091032
-Astria Laura Dwi Putri — NIM: 2515091082
-Dhea Natasya Putri — NIM: 2515091131
+
