@@ -300,7 +300,7 @@ Website **Hidup Sehat - Edukasi Kesehatan Masyarakat** dipublikasikan menggunaka
 
 | Keperluan | URL |
 |---|---|
-| **Website (versi online)** |  |
+| **Website (versi online)** | https://lyradelia-commits.github.io/Hidup-Sehat-SDG-3/ |
 | **Repositori GitHub** | https://github.com/lyradelia-commits/Hidup-Sehat-SDG-3.git |
 | **Halaman Sumber** | |
 
