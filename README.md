@@ -324,7 +324,7 @@ Website menggunakan HTML dan CSS statis sehingga tidak memerlukan `npm install` 
 
 ## 8. Referensi Konten dan Aset
 
-Konten website **Hidup Sehat — Edukasi Kesehatan Masyarakat** disusun berdasarkan sumber informasi kesehatan yang relevan dan tepercaya. Materi mencakup pola hidup sehat, gizi seimbang, aktivitas fisik, kesehatan mental, serta pencegahan penyakit.
+Konten website **Hidup Sehat - Edukasi Kesehatan Masyarakat** disusun berdasarkan sumber informasi kesehatan yang relevan dan tepercaya. Materi mencakup pola hidup sehat, gizi seimbang, aktivitas fisik, kesehatan mental, serta pencegahan penyakit.
 
 Daftar referensi dan kredit aset juga tersedia pada halaman **Sumber** (`sumber.html`) sebagai bentuk transparansi sumber informasi dan visual yang digunakan dalam proyek.
 
