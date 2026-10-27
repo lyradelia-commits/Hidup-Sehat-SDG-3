@@ -301,7 +301,7 @@ Website **Hidup Sehat - Edukasi Kesehatan Masyarakat** dipublikasikan menggunaka
 | Keperluan | URL |
 |---|---|
 | **Website (versi online)** |  |
-| **Repositori GitHub** | https://github.com/lyradelia-commits/Hidup-Sehat-SDG-3 |
+| **Repositori GitHub** | https://github.com/lyradelia-commits/Hidup-Sehat-SDG-3.git |
 | **Halaman Sumber** | |
 
 Website diposting menggunakan GitHub Pages dengan akses publik melalui HTTPS. Pembaruan website dapat dipublikasikan melalui repositori GitHub sesuai dengan konfigurasi deployment yang digunakan.
