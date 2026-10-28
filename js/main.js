@@ -1,6 +1,3 @@
-/* Menu navigasi untuk layar kecil.
-   Tanpa JavaScript pun menu tetap bisa dibuka karena tautan tersedia
-   di footer; skrip ini hanya menambah kenyamanan di ponsel. */
 (function () {
   'use strict';
 
